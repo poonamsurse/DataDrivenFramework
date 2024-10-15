@@ -1,0 +1,4 @@
+bmlbtn=div > div:last-child > .btn.btn-primary.btn-lg
+
+#add customer Test
+addCustBtn=button[ng-click='addCust()

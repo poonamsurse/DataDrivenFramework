@@ -1,0 +1,17 @@
+package com.w2a.rough;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class TestProperties {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Properties config=new Properties();
+		FileInputStream f=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Config.properties");
+		
+
+	}
+
+}

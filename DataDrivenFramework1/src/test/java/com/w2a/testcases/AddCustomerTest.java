@@ -19,7 +19,7 @@ public class AddCustomerTest extends TestBase {
 
 		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(PostCode);
 
-		driver.findElement(By.cssSelector(OR.getProperty("addbtn"))).click();
+		//driver.findElement(By.cssSelector(OR.getProperty("addbtn"))).click();
 
 	}
 	

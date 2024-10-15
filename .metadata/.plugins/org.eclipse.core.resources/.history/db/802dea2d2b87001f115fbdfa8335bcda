@@ -1,0 +1,70 @@
+package com.w2a.base;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestBase {
+	/*
+	 * Webdriver
+	 * properties
+	 * logs
+	 * extentreports
+	 * DB
+	 * excel
+	 * mail
+	 * 
+	 * 
+	 */
+	
+	
+    public static WebDriver driver;
+	public static Properties config=new Properties();
+	public static Properties or=new Properties();
+public static FileInputStream fis;
+	
+	public void setUp()
+	{
+		if(driver==null)
+		{
+			
+			 try {
+				fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Config.properties");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+				try {
+					config.load(fis);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			 try {
+				fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Config.properties");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+				try {
+					or.load(fis);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		
+	}
+
+	
+	public void tearDown()
+	{
+		
+	}
+}
